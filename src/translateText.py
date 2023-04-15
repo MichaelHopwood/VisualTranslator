@@ -1,6 +1,7 @@
 import requests
 import json
 
+# Translator API
 API_URL = "https://api-inference.huggingface.co/models/Helsinki-NLP/opus-mt-es-en"
 headers = {"Authorization": "Bearer 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"}
 
