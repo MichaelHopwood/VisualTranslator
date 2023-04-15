@@ -15,10 +15,12 @@ def translate(text_to_translate):
   })
   return output
 
-text_to_translate = "Ha abandonado a sus médicos, señora; bajo cuyo prácticas ha perseguido el tiempo con esperanza, y no encuentra otra ventaja en el proceso sino sólo la perdiendo la esperanza por el tiempo."
+
+if __name__ == "__main__":
+	text_to_translate = "Ha abandonado a sus médicos, señora; bajo cuyo prácticas ha perseguido el tiempo con esperanza, y no encuentra otra ventaja en el proceso sino sólo la perdiendo la esperanza por el tiempo."
 
 
-translated= translate(text_to_translate)
+	translated= translator_es_en(text_to_translate)
 
-print(translated)
+	print(translated)
 
