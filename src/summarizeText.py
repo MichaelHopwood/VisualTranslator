@@ -1,16 +1,15 @@
 # Summarize english passage
+#Libraries
+import nltk
+from nltk.corpus import stopwords
+from nltk.tokenize import word_tokenize, sent_tokenize
+
+#Data download (might need)
+nltk.download('stopwords')
+nltk.download('punkt')
 
 def summarize(text):
-    
-    #Libraries
-    import nltk
-    from nltk.corpus import stopwords
-    from nltk.tokenize import word_tokenize, sent_tokenize
 
-    #Data download (might need)
-    nltk.download('stopwords')
-    nltk.download('punkt')
-    
     #Tokenize words and sentences, set up stopwords
     stoppers = set(stopwords.words("english"))
     words = word_tokenize(text)
@@ -56,4 +55,4 @@ def summarize(text):
         if (j in sentenceScores) and (sentenceScores[j] > (1.2 * (int(sentenceScoresSum / len(sentenceScores))))):
             summary_text += " " + j
 
-    return print(summary_text)
+    return summary_text

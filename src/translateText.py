@@ -17,10 +17,6 @@ def translate(text_to_translate):
 
 
 if __name__ == "__main__":
-	text_to_translate = "Ha abandonado a sus médicos, señora; bajo cuyo prácticas ha perseguido el tiempo con esperanza, y no encuentra otra ventaja en el proceso sino sólo la perdiendo la esperanza por el tiempo."
-
-
-	translated= translate(text_to_translate)
-
-	print(translated)
-
+    text_to_translate = "Ha abandonado a sus médicos, señora; bajo cuyo prácticas ha perseguido el tiempo con esperanza, y no encuentra otra ventaja en el proceso sino sólo la perdiendo la esperanza por el tiempo."
+    translated= translate(text_to_translate)
+    print(translated)
