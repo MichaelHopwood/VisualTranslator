@@ -17,12 +17,12 @@ def word_boundary(text, char_limit):
                 current_chunk.append(word)
                 current_length += word_length
             else:
-                char_tokens.append(" ".join(current_chunk))
+                char_tokens.append(' '.join(current_chunk))
                 current_chunk = [word]
                 current_length = word_length
 
     if current_chunk:
-        char_tokens.append(" ".join(current_chunk))
+        char_tokens.append(' '.join(current_chunk))
 
     return char_tokens
 
@@ -34,6 +34,6 @@ def translate(text):
     sents = sent_tokenize(text)
     for i in sents:
         # Calculate each word boundary of 500 characters or less
-        for j in word_boundary(i, 500):
+        for j in word_boundary(sent_tokenize(i), 500):
             translation += " " + translator.translate(j)
     return translation
