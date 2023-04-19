@@ -8,5 +8,5 @@ def translate(text):
     # Loop through each sentence to translate
     sents = sent_tokenize(text)
     for i in sents:
-        translation += translator.translate(i)
+        translation += " " + translator.translate(i)
     return translation

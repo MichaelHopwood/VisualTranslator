@@ -30,7 +30,7 @@ def summarize(text):
 
     #Create dictionary to track sentence scores
     sentenceScores = dict()
-       
+
     #For loop to tally sentence scores
     for j in sents:
         for i, count in wordScores.items():
@@ -39,20 +39,20 @@ def summarize(text):
                     sentenceScores[j] += count
                 else:
                     sentenceScores[j] = count
-      
+
     #Initialize sum
     sentenceScoresSum = 0
     
     #Tally sum
     for j in sentenceScores:
         sentenceScoresSum += sentenceScores[j]
-       
+
     #Initialize summary
     summary_text = ''
     
     #Build summary
     for j in sents:
-        if (j in sentenceScores) and (sentenceScores[j] > (1.2 * (int(sentenceScoresSum / len(sentenceScores))))):
+        if (j in sentenceScores) and (sentenceScores[j] > (1.2 * ((sentenceScoresSum / len(sentenceScores))))):
             summary_text += " " + j
 
     return summary_text
